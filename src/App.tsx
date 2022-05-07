@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import './index.css';
+import Functional from './components/Functional';
+import Class from './components/Class';
+import { ClassCount } from './components/ClassCount';
+import { FunctionalCount } from './components/FunctionalCount';
 
 function App() {
+  const [key, setState] = useState('key-1');
+  // if (condition) {
+  //   return <div></div>;
+  // }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Functional name="함수형" num={1}>
+        <div>children1</div>
+        <div>children2</div>
+      </Functional>
+
+      <Class name="클래스형" num={2}>
+        <div>children1</div>
+        <div>children2</div>
+      </Class>
+
+      <FunctionalCount />
+      <ClassCount />
     </div>
   );
 }

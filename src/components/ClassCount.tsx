@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class ClassCount extends React.Component {
+export class ClassCount extends React.Component<any, any> {
   value: any;
   state = {
     count: 0,
@@ -12,6 +12,10 @@ export class ClassCount extends React.Component {
   componentDidMount() {
     this.value = setInterval(() => {
       this.setState({ count: this.state.count + 1 });
+      this.setState((state: any) => {
+        return { count: state.count + 1 };
+      });
+      // setState 는 비동기적으로 실행된다
     }, 1000);
   }
   //   setState호출 덕분에 React는 state가 변경된 것을 인지하고

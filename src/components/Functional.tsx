@@ -24,7 +24,9 @@ function Functional(props: Props) {
 
   useEffect(function () {
     const value = setInterval(function () {
-      setDate(getDate());
+      setDate(state => {
+        return getDate();
+      });
     }, 1000);
 
     return function () {

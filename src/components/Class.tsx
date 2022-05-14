@@ -9,7 +9,6 @@ interface Props {
 
 class Class extends React.Component<Props> {
   value: any;
-
   state = {
     time: '',
   };

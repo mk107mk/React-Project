@@ -5,7 +5,10 @@ export function FunctionalCount() {
 
   useEffect(function () {
     const value = setInterval(() => {
-      setCount(count + 1);
+      setCount(function (state) {
+        return state + 1;
+      });
+      console.log(count);
     }, 1000);
 
     return function () {
@@ -16,7 +19,7 @@ export function FunctionalCount() {
     <>
       <h2>함수형 컴포넌트 숫자 카운트</h2>
       <h4>{count}</h4>
-      <button>클릭</button>
+      {count > 10 && <h3>10보다 커짐!!</h3>}
     </>
   );
 }

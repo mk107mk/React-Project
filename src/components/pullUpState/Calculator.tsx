@@ -20,7 +20,7 @@ export function Calculator() {
 const TempInput = React.forwardRef(function TempInput(props: any, ref) {
   return (
     <input
-      ref={ref}
+      // ref={ref}
       value={props.value}
       type="text"
       onChange={e => props.onChange(e.target.value)}

@@ -11,21 +11,28 @@ import './index.css';
 // import { Array } from './components/ArrayRendering';
 // import { ControlledInput } from './components/ControlledInput';
 // import { ContextExample } from './components/ContextExample';
-import { Form } from './components/controlledComponent/Form';
-import { Onclick } from './components/Props,State';
-import Textarea from './components/controlledComponent/Textarea';
-import { Select } from './components/controlledComponent/Select';
-import { Calculator } from './components/pullUpState/Calculator';
-import { Children } from './components/composition/Children';
-import { User } from './components/composition/specialization/User';
-import { Admin } from './components/composition/specialization/Admin';
-import { ContextExample } from './components/context/ContextExample';
-import { BeforeContext } from './components/context/BeforeContext';
-import { AfterContext } from './components/context/AfterContext';
-import { UseMemo } from './components/hook/UseMemo';
-import { UseCallback } from './components/hook/UseCallback';
-import { Specialization } from './components/composition/specialization/Speciialization';
-import { UseRef } from './components/hook/UseRef';
+// import { Form } from './components/controlledComponent/Form';
+// import { Onclick } from './components/Props,State';
+// import Textarea from './components/controlledComponent/Textarea';
+// import { Select } from './components/controlledComponent/Select';
+// import { Calculator } from './components/pullUpState/Calculator';
+// import { Children } from './components/composition/Children';
+// import { User } from './components/composition/specialization/User';
+// import { Admin } from './components/composition/specialization/Admin';
+// import { ContextExample } from './components/hook/useContext/ContextExample';
+// import { BeforeContext } from './components/hook/useContext/BeforeContext';
+// import { AfterContext } from './components/hook/useContext/AfterContext';
+// import { UseMemo } from './components/hook/UseMemo';
+// import { UseCallback } from './components/hook/UseCallback';
+// import { Specialization } from './components/composition/specialization/Speciialization';
+// import { UseRef } from './components/hook/Ref/UseRef';
+// import { ShowComponent } from './hoc/ShowComponent';
+
+// import { ChanageThema } from './components/hook/ChageThema';
+// import CustomInput from './components/hook/Ref/ForwardRef';
+// import ForwardRef from './components/hook/Ref/ForwardRef';
+// import UseImperativeHandle from './components/hook/Ref/UseImperativeHandle';
+import Example from './components/hook/Example';
 
 function App() {
   const [key, setState] = useState('key-1');
@@ -52,7 +59,7 @@ function App() {
       <Map />
       <Test />
       <Array />
-      <ControlledInput /> */}
+      <ControlledInput />
       <ContextExample />
       <BeforeContext />
       <AfterContext />
@@ -69,6 +76,11 @@ function App() {
       <br />
       <UseRef />
       <Calculator />
+      <ShowComponent /> */}
+      <Example />
+      {/* <ChanageThema /> */}
+      {/* <ForwardRef /> */}
+      {/* <UseImperativeHandle /> */}
     </div>
   );
 }

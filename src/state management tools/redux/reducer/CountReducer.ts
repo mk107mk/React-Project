@@ -1,9 +1,9 @@
-import { Action } from '../actions/index';
 import { ActionType } from '../action-types';
+import { Action } from '../actions';
 
 const initialState = 0;
 
-export const countReducer = (state: number = initialState, action: Action) => {
+export default function reducer(state: number = initialState, action: Action) {
   switch (action.type) {
     case ActionType.INCREASE:
       return state + 1;
@@ -14,4 +14,4 @@ export const countReducer = (state: number = initialState, action: Action) => {
     default:
       return state;
   }
-};
+}

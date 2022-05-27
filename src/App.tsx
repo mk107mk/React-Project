@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import './index.css';
-import { RecoilRoot, atom, useRecoilState, useRecoilValue } from 'recoil';
-import { Provider } from 'react-redux';
 
 // import Functional from './components/Functional';
 // import Class from './components/Class';
@@ -35,10 +33,12 @@ import { Provider } from 'react-redux';
 // import CustomInput from './components/hook/Ref/ForwardRef';
 // import ForwardRef from './components/hook/Ref/ForwardRef';
 // import UseImperativeHandle from './components/hook/Ref/UseImperativeHandle';
-
-import Recoil from './state management tools/recoil/Recoil';
-import Redux from './state management tools/redux/Redux';
-import store from './state management tools/redux/Store';
+import { RecoilRoot, atom, useRecoilState, useRecoilValue } from 'recoil';
+import Recoil from './state management tools/recoil/Counter';
+import Redux from './state management tools/redux/Counter';
+import Mobx from './state management tools/mobx/Counter';
+import { Provider } from 'react-redux';
+import { store } from './state management tools/redux/store';
 
 function App() {
   const [key, setState] = useState('key-1');
@@ -47,8 +47,8 @@ function App() {
   // }
 
   return (
-    <div>
-      <Provider store={store}>
+    <Provider store={store}>
+      <div>
         {/* <Functional name="함수형" num={1}>
         <div>children1</div>
         <div>children2</div>
@@ -93,8 +93,9 @@ function App() {
           <Recoil />
         </RecoilRoot>
         <Redux />
-      </Provider>
-    </div>
+        <Mobx />
+      </div>
+    </Provider>
   );
 }
 

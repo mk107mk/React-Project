@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 import './index.css';
+import { RecoilRoot, atom, useRecoilState, useRecoilValue } from 'recoil';
+import { Provider } from 'react-redux';
+
 // import Functional from './components/Functional';
 // import Class from './components/Class';
 // import { ClassCount } from './components/ClassCount';
@@ -32,7 +35,10 @@ import './index.css';
 // import CustomInput from './components/hook/Ref/ForwardRef';
 // import ForwardRef from './components/hook/Ref/ForwardRef';
 // import UseImperativeHandle from './components/hook/Ref/UseImperativeHandle';
-import Example from './components/hook/Example';
+
+import Recoil from './state management tools/recoil/Recoil';
+import Redux from './state management tools/redux/Redux';
+import store from './state management tools/redux/Store';
 
 function App() {
   const [key, setState] = useState('key-1');
@@ -42,7 +48,8 @@ function App() {
 
   return (
     <div>
-      {/* <Functional name="함수형" num={1}>
+      <Provider store={store}>
+        {/* <Functional name="함수형" num={1}>
         <div>children1</div>
         <div>children2</div>
       </Functional>
@@ -77,10 +84,16 @@ function App() {
       <UseRef />
       <Calculator />
       <ShowComponent /> */}
-      <Example />
-      {/* <ChanageThema /> */}
-      {/* <ForwardRef /> */}
-      {/* <UseImperativeHandle /> */}
+        {/* <Example /> */}
+        {/* <ChanageThema /> */}
+        {/* <ForwardRef /> */}
+        {/* <UseImperativeHandle /> */}
+        {/* <Context /> */}
+        <RecoilRoot>
+          <Recoil />
+        </RecoilRoot>
+        <Redux />
+      </Provider>
     </div>
   );
 }
